@@ -9,15 +9,8 @@ W pliku tym znajdują się deklaracje funkcji oraz tworzona jest stała przechow
 Plik timer.c
 W definicji funkcji Timer23Gated_Init() skonfigurowano timer 2 w taki sposób, żeby razem z timerem trzecim, tworzył jeden timer 32-bitowy. Posiada priorytet o 
 indeksie 3 i subpriorytet o indeksie 1. Timer ma skonfigurowany preskaler na wartość 256. Stan wysoki na wybranym pinie powoduje rozpoczęcie liczenia, a stan niski jego koniec. W celu dobrania preskalera do mierzenia oczekiwanej częstotliwości lub impulsów, można posłóżyć się poniższą tebelą częstotliwości:
-preskaler	fmin (65535)		fmax (1)
-1			    921					    126,7k
-2			    460					    126,7k
-4			    230					    126,7k
-8			    115					    126,7k
-16			  57,5				    126,7k
-32			  28,8				    126,7k
-64			  14,4				    126,7k
-256			  3,6					    126,7k
+
+![image](https://user-images.githubusercontent.com/104322532/198850644-a48ce941-90bb-4c28-aa3f-310947633723.png)
 
 W definicji funkcji Timer2_Init(frequency) ustawiono priorytety w taki sam sposób jak w poprzedniej funkcji, a preskaler ustawiono na wartość 8.
 
